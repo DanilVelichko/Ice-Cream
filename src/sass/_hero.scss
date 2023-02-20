@@ -1,0 +1,274 @@
+.hero {
+    position: relative;
+    background-image: url(../images/hero-header/hero-points-mob.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% auto;
+    @include tablet {
+        background-image: url(../images/hero-header/hero-points-tab.png);
+    }
+    @include desktop {
+        background-image: url(../images/hero-header/hero-points-des.png);
+    }
+    
+
+    .hero-container {
+        position: relative;
+        padding-top: 60px;
+        padding-bottom: 240px;
+        z-index: 0;
+            
+        @include tablet {
+                padding-top: 28px;
+                padding-bottom: 13px;
+            }
+        @include desktop {
+            padding-top: 35px;
+            padding-bottom: 65px;
+
+        }    
+    }
+
+    .title-container {
+        display: flex;
+        justify-content: space-between;
+    }
+   
+    .hero-title {
+        font-family: 'Seymour One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 1.26;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+        max-width: 250px;
+        @include tablet {
+            max-width: 180px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+         @include desktop {
+            max-width: 367px;
+            font-size: 38px;
+            margin-bottom: 28px;
+        }
+        
+    }
+    
+    .hero-title-part {
+        font-size: 34px;
+        @include tablet {
+            font-size: 24px;
+        }
+        @include desktop {
+            font-size: 38px;
+        }
+    }
+    
+    
+    @mixin button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 8px;
+        height: 24px;
+        @include desktop {
+            font-size: 14px;
+            height: 42px;
+        }
+    }
+
+    @mixin primary-button {
+        @include button();
+        color: #131313;
+        border: 2px solid #F8D24E;
+        border-radius: 8px;
+        width: 62px;
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+            border-color: #0A8817;
+        }
+
+        &:focus {
+            color: #FCFCFC;
+        }
+        @include desktop {
+            width: 134px;
+        }
+    }
+
+    @mixin secondary-button {
+        @include button();
+        text-decoration-line: underline;
+        color: #F8D24E;
+        background-color: transparent;
+        border: 0;
+        width: 82px;
+
+        &:hover {
+            color: #0A8817;
+        }
+
+        &:focus {
+            color: #FCFCFC;
+        }
+        @include desktop {
+            width: 154px;
+        }
+    }
+
+
+    .hero-navigation {
+        display: flex;
+        gap: 8px;
+
+        @include desktop {
+            gap: 12;
+        }
+
+        .products {
+            .products-button {
+                @include primary-button();
+            }
+        }
+
+        .made {
+            .made-button {
+                @include secondary-button();
+            }
+        }
+    }
+
+    .hero-lorem-ipsum {
+        display: none;
+        @include tablet {
+            display: flex;
+            gap: 33px;
+            align-items: center;
+            margin-top: 28px;
+            }
+        @include desktop {
+            margin-top: 42px;
+            gap: 14px;
+        }
+        .many-ice-cream {
+            animation: slide-in 3s;
+            &:hover {
+                animation: spin 1s ease infinite;
+            }
+        }
+        .hero-lorem-ipsum-text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            color: #FCFCFC;
+            max-width: 150px;
+            display: block;
+            margin-bottom: 20px;
+
+            @include desktop {
+                max-width: 200px;
+                font-size: 14px;
+                margin-bottom: 32px;
+            }
+        }
+    }
+
+    .cafes-trucks {
+        display: none;
+        @include tablet {
+            display: block;
+
+            .cafes-trucks-item {
+                &:first-of-type {
+                    margin-bottom: 20px;
+                    @include desktop {
+                        margin-bottom: 16px;
+                    }
+                }
+                
+                text-align: right;
+                
+                .cafe-trucks-number {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 28px;
+                    line-height: 1.21;
+                    letter-spacing: 0.04em;
+                    text-transform: uppercase;
+                    color: #131313;
+                    margin-bottom: 4px;
+                    @include desktop {
+                        font-size: 46px;
+                    }
+                }
+                .cafe-trucks-text {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 8px;
+                    line-height: 1.25;
+                    color: #FCFCFC;
+                    @include desktop {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .hero-ice-cream {
+        z-index: -1;
+        position: absolute;
+        bottom: -52px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: fadein 5s;
+        @include tablet {
+            right: 20px;
+            transform: none;
+            bottom: -68px;
+            left: auto;
+        }
+        @include desktop {
+            bottom: -100px;
+            right: 7px;
+        }
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-in {
+    from {transform: translateX(-300px);}
+    10% {transform: translateY(-200px);}
+    to {transform: none;}
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+

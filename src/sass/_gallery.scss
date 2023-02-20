@@ -1,0 +1,224 @@
+.double {
+  width: 100%;
+  background-color: #f5f5f5;
+  background-image: url(../images/gallery/icecreambg-pgn.png);
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.gallery {
+  width: 100%;
+  height: auto;
+  margin-bottom: 56px;
+
+  @include mobile {
+    max-width: 480px;
+  }
+  @include tablet {
+    max-width: 704px;
+    margin-bottom: -104px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  @include desktop {
+    max-width: 1013px;
+    margin-bottom: 34px;
+  }
+}
+
+.gallery-wrap {
+  position: relative;
+  top: -24px;
+  @include tablet {
+    top: -164px;
+  }
+  @include desktop {
+    top: -94px;
+  }
+}
+
+.gallery-list {
+  width: 100%;
+  height: auto;
+}
+
+.image-item {
+  border: 1px solid transparent;
+  width: 100%;
+  border-radius: 8px;
+  @include tablet {
+    border-radius: 24px;
+  }
+  @include desktop {
+    border-radius: 24px;
+  }
+}
+
+.gallery-image {
+  width: 100%;
+  align-items: center;
+  padding: 0 5px;
+}
+
+// Castomer
+
+.castomer {
+  width: 100%;
+  height: auto;
+
+  @include mobile {
+    max-width: 480px;
+  }
+  @include tablet {
+    max-width: 705px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  @include desktop {
+    max-width: 968px;
+  }
+}
+
+.castomer-item {
+  width: 100;
+  height: auto;
+}
+
+.swiper-wrapper {
+  height: auto;
+  text-align: center;
+}
+
+.castomer-wrap {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding: 0 5px;
+
+  padding-bottom: 420px;
+  @include tablet {
+    padding-bottom: 427px;
+  }
+  @include desktop {
+    padding-bottom: 250px;
+  }
+}
+
+.castomer-image {
+  margin: auto;
+  border-radius: 50%;
+  margin-bottom: 32px;
+  @include tablet {
+    margin-bottom: 28px;
+  }
+  @include desktop {
+    margin-bottom: 32px;
+  }
+}
+
+.castomer-box {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  @include tablet {
+    max-width: 705px;
+    border-radius: 24px;
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    max-width: 968px;
+    border-radius: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+.castomer-text {
+  font-family: Montserrat;
+  padding: 24px 39px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.6;
+  letter-spacing: 0em;
+
+  @include tablet {
+    max-width: 550px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    padding-top: 29px;
+    padding-bottom: 29px;
+  }
+  @include desktop {
+    max-width: 800px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.88;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding-top: 39px;
+    padding-bottom: 47px;
+  }
+}
+
+.castomer-name {
+  color: $title-text-color;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.85;
+  letter-spacing: 0em;
+  font-family: Montserrat;
+
+  margin-bottom: 150px;
+  @include tablet {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.87;
+    letter-spacing: 0em;
+  }
+  @include desktop {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.87;
+    letter-spacing: 0em;
+  }
+}
+
+.swiper-pagination {
+  margin-bottom: 380px;
+  @include tablet {
+    margin-bottom: 380px;
+  }
+  @include desktop {
+    margin-bottom: 200px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $background-color !important;
+  margin: 0 30px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 9px);
+}

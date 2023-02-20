@@ -1,0 +1,122 @@
+.advantages {
+  position: relative;
+  padding-bottom: 60px;
+
+  @include tablet {
+    padding-bottom: 204px;
+  }
+
+  @include desktop {
+    padding-bottom: 180px;
+  }
+
+  &__card-set {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    color: $primary-text-color;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 80px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 66px;
+    z-index: -1;
+    cursor: pointer;
+
+    @include tablet {
+      flex-basis: calc((100% - 2 * 80px) / 3);
+      padding-top: 82px;
+    }
+
+    @include desktop {
+      flex-basis: calc((100% - 2 * 32px) / 3);
+      padding-top: 90px;
+    }
+  }
+
+  &__card::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    padding: 7px;
+    background-image: url('../images/about/advantages-icon-1.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__card:nth-child(1)::before {
+    background-image: url('../images/about/advantages-icon-1.svg');
+  }
+
+  &__card:nth-child(2)::before {
+    background-image: url('../images/about/advantages-icon-2.svg');
+  }
+
+  &__card:nth-child(3)::before {
+    background-image: url('../images/about/advantages-icon-3.svg');
+  }
+
+  &__value {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 18px;
+
+    @include tablet {
+      font-size: 48px;
+      line-height: 1.23;
+      margin-bottom: 16px;
+    }
+
+    @include desktop {
+      font-size: 58px;
+      line-height: 1.22;
+    }
+  }
+
+  &__text {
+    max-width: 230px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.67;
+    text-align: center;
+    color: #fcfcfc;
+
+    @include tablet {
+      max-width: 152px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.71;
+    }
+
+    @include desktop {
+      max-width: 368px;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+  }
+}

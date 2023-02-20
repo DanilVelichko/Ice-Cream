@@ -1,0 +1,104 @@
+<section id="about" class="section about">
+  <div class="container">
+    <p class="section-subtitle about__section-subtitle">tradition and love</p>
+    <h2 class="section-title about__section-title">how it’s made?</h2>
+    <div class="about__content">
+      <audio id="myAudio">
+        <source src="./images/about/mixkit-cow-moo-1744.ogg" type="audio/wav" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="about__figure" onclick="playAudio()">
+        <picture>
+          <source
+            srcset="
+              ./images/about/about-cow.jpg    1x,
+              ./images/about/about-cow@2x.jpg 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/about/about-cow-tab.jpg    1x,
+              ./images/about/about-cow-tab@2x.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/about/about-cow-mob.jpg    1x,
+              ./images/about/about-cow-mob@2x.jpg 2x
+            "
+            media="(min-width:320px)"
+          />
+
+          <img
+            class="about__img"
+            src="./images/about/about-cow.jpg"
+            alt="сіра корова на лузі"
+            width="278"
+          />
+        </picture>
+      </div>
+      <div class="about__text">
+        <p class="about__text-item">
+          Ice is a place where you will become not only a little happier, but
+          also healthier. Health is the main value for us, and we follow it when
+          creating our handmade desserts.
+        </p>
+        <p class="about__text-item">
+          We use traditional recipes and 100% natural ingredients. Our products
+          are so natural that they can be given to children from the age of
+          three years. Sweets lovers can expect 55 types of ice cream, 15 types
+          of coffee and 23 milkshakes.
+        </p>
+        <p class="about__text-item">
+          This is enough to choose ice cream and coffee for any mood!
+        </p>
+        <button class="btn about__btn" type="button" data-about-modal-open>
+          Read more
+          <svg class="btn-icon" width="10" height="10">
+            <use href="./images/icons.svg#icon-chevron-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal-->
+<div class="modal-backdrop is-hidden" data-about-modal>
+  <div class="modal">
+    <button class="modal__close-btn" data-about-modal-close>
+      <svg width="11" height="11">
+        <use href="./images/about/symbol-defs.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h3 class="modal__title">How it’s made?</h3>
+    <div class="iframe-container">
+      <iframe
+        class="responsive-iframe"
+        width="448"
+        height="215"
+        src="https://www.youtube.com/embed/CcCj5geNRwM"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <p class="modal__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    </p>
+  </div>
+</div>
+
+<script>
+  const moo = document.getElementById('myAudio');
+  const figure = document.querySelector('.about__figure');
+
+  function playAudio() {
+    moo.play();
+  }
+</script>

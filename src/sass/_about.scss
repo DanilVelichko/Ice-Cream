@@ -1,0 +1,355 @@
+.section-subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+
+  @include tablet {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 1.23;
+    letter-spacing: 0.04em;
+  }
+
+  @include desktop {
+    font-size: 30px;
+  }
+}
+
+.section-title {
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.27;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 34px;
+    line-height: 1.26;
+    letter-spacing: 0.06em;
+  }
+
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+}
+
+.about__section-title {
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 72px;
+  }
+
+  @include desktop {
+    margin-bottom: 82px;
+  }
+}
+
+.about {
+  padding-top: 60px;
+  text-align: center;
+  font-family: 'Montserrat';
+  color: $primary-text-color;
+  background-color: $background-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: start;
+      align-items: start;
+      text-align: start;
+      margin-bottom: 74px;
+    }
+
+    @include desktop {
+      align-items: center;
+      margin-bottom: 89px;
+    }
+  }
+
+  &__figure {
+    position: relative;
+    width: 278px;
+    height: 278px;
+    border-radius: 50%;
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+    margin-bottom: 62px;
+    transition: background 450ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      animation: circle 2000ms linear 500ms normal;
+      // transform: translate(-1px, 15px);
+
+      @include desktop {
+        // background-image: repeating-linear-gradient(
+        //   135deg,
+        //   $background-color,
+        //   $background-color 20px,
+        //   rgba(248, 210, 78, 0.7) 20px,
+        //   rgba(248, 210, 78, 0.7) 40px
+        // );
+        // transform: translate(-20px, 20px);
+      }
+    }
+
+    @include tablet {
+      width: 335px;
+      height: 335px;
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
+
+    @include desktop {
+      width: 500px;
+      height: 500px;
+      margin-right: 100px;
+    }
+  }
+
+  .about__figure:hover .about__img {
+    // top: -20px;
+    // left: 1px;
+
+    @include desktop {
+      animation: cow 2000ms linear 500ms normal;
+      // top: -30px;
+      // left: 30px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: -1px;
+    top: 22px;
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: top 450ms cubic-bezier(0.4, 0, 0.2, 1),
+      left 450ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include tablet {
+      left: -1px;
+      top: 26px;
+    }
+
+    @include desktop {
+      left: -8px;
+      top: 39px;
+      width: 490px;
+    }
+  }
+
+  &__text {
+    max-width: 334px;
+    font-size: 12px;
+    line-height: 1.75;
+    letter-spacing: 0.04em;
+
+    @include tablet {
+      padding-top: 7px;
+    }
+
+    @include desktop {
+      max-width: 463px;
+      font-size: 14px;
+      line-height: 1.93;
+      padding-top: 0;
+    }
+
+    &-item:first-of-type {
+      @include desktop {
+        font-size: 16px;
+        line-height: 1.75;
+      }
+    }
+
+    &-item:not(:last-of-type) {
+      margin-bottom: 4px;
+
+      @include tablet {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-item:last-of-type {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 20px auto 42px;
+
+    @include tablet {
+      margin: 48px 0 0 0;
+    }
+  }
+}
+
+//------------- Modal --------------
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  cursor: not-allowed;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-backdrop.is-hidden .modal {
+  transform: scale(0.9);
+}
+
+.modal {
+  position: relative;
+  z-index: 1200;
+  max-width: 568px;
+  width: 92vw;
+  margin: auto;
+  padding: 28px;
+  background-color: $primary-text-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  cursor: auto;
+  color: $title-text-color;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    padding: 32px 60px;
+  }
+
+  &__title {
+    font-family: 'Seymour One';
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    fill: $title-text-color;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+
+    @include tablet {
+      right: 20px;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 20px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 1.38;
+      margin-top: 32px;
+    }
+  }
+}
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation on moo */
+@keyframes circle {
+  0% {
+    transform: translate(0);
+  }
+
+  50% {
+    transform: translate(-20px, 20px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes cow {
+  0% {
+    left: -1px;
+    top: 22px;
+  }
+
+  50% {
+    top: -30px;
+    left: 30px;
+  }
+
+  100% {
+    left: -1px;
+    top: 22px;
+  }
+}

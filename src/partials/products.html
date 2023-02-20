@@ -1,0 +1,189 @@
+<!----------------------------------------Product section ----------------------------------------------->
+<section id="products-section" class="products products-background">
+  <div class="products-container container">
+  <p class="products-pretittle">100% natural</p>
+  <h2 class="product-title">Products</h2> 
+
+  <ul class="products-list">
+    <li class="products-item">
+      <div class="product--circle-green"></div>
+      <div class="product--foto-container">
+        <picture class="products--foto">
+          <source class="products--foto" srcset="
+              /src/images/product/ice-cream.jpg    1x,
+              /src/images/product/ice-cream-2x.jpg 2x
+            " media="(min-width:1200px)" />
+          <source class="products--foto" srcset="
+              /src/images/product/tablet/ice-cream-tablet.jpg    1x,
+              /src/images/product/tablet/ice-cream-tablet-2x.jpg 2x
+            " media="(min-width:768px)" />
+          <source class="products--foto" srcset="
+              /src/images/product/mobile/ice-cream-mobile.jpg    1x,
+              /src/images/product/mobile/ice-cream-mobile-2x.jpg 2x
+            " media="(min-width:480px)" />
+          <img class="products--foto" src="/src/images/product/ice-cream.jpg" alt="Three ice-cream balls" />
+        </picture>
+      </div>
+      <h3 class="products-names">Ice cream</h3>
+      <p class="products-about">
+        Soft ice cream with a delicate taste. Made with milk, cream, sugar and
+        natural stabilizer
+      </p>
+      <button type="button" class="products_arrow" data-products-modal-open>
+        <img class="products-arrow--size" src="/src/images/product/product-arrow.png" alt="" /></button>
+    </li>
+    <li class="products-item">
+      <div class="product--circle-yellow"></div>
+      <div class="product--foto-container">
+        <picture>
+          <source srcset="
+              /src/images/product/ice-coffe.jpg   1x,
+              /src/images/product/ice-coffe2x.jpg 2x
+            " media="(min-width:1200px)" />
+          <source srcset="
+              /src/images/product/tablet/ice-coffe-tablet.jpg    1x,
+              /src/images/product/tablet/ice-coffe-tablet-2x.jpg 2x
+            " media="(min-width:768px)" />
+          <source srcset="
+              /src/images/product/mobile/ice-coffe-mobile.jpg    1x,
+              /src/images/product/mobile/ice-coffe-mobile-2x.jpg 2x
+            " media="(min-width:480px)" />
+          <img class="products--foto" src="/src/images/product/ice-coffe.jpg" alt="Three ice-cream balls" />
+        </picture>
+      </div>
+      <h3 class="products-names">Ice coffee</h3>
+      <p class="products-about">
+        Fragrant invigorating drink created from 100% natural ingredients
+        without the use of preservatives and flavor enhancers
+      </p>
+      <button type="button" class="products_arrow" data-products-modal-open2>
+        <img class="products-arrow--size" src="/src/images/product/product-arrow.png" alt="" /></button>
+    </li>
+    <li class="products-item">
+      <div class="product--circle-orange"></div>
+      <div class="product--foto-container">
+        <picture>
+          <source srcset="
+              /src/images/product/milkshakes.jpg    1x,
+              /src/images/product/milkshakes-2x.jpg 2x
+            " media="(min-width:1200px)" />
+          <source srcset="
+              /src/images/product/tablet/milkshakes-tablet.jpg    1x,
+              /src/images/product/tablet/milkshakes-tablet-2x.jpg 2x
+            " media="(min-width:768px)" />
+          <source srcset="
+              /src/images/product/mobile/milkshakes-mobile.jpg    1x,
+              /src/images/product/mobile/milkshakes-mobile-2x.jpg 2x
+            " media="(min-width:480px)" />
+          <img class="products--foto" src="/src/images/product/milkshakes.jpg" alt="Big cup with milkshake" />
+        </picture>
+      </div>
+      <h3 class="products-names">Milkshakes</h3>
+      <p class="products-about">
+        Sweet drinks based on milk and ice cream, supplemented with syrups,
+        fruits, berries and other sweets of your choice
+      </p>
+      <button type="button" class="products_arrow" data-products-modal-open>
+        <img class="products-arrow--size" src="/src/images/product/product-arrow.png" alt="" /></button>
+    </li>
+  </ul>
+
+  <!--------------------------------------------------Modal widow----------------------------------->
+  <div class="backdrop__product-modal is-hidden" data-products-modal>
+    <div class="product-modal">
+      <div class="product-modal__container">
+
+        <!------------------ Close button ----------------->
+
+        <div class="product-modal__wrap">
+          <h4 class="product-modal__title">Chololate icecream</h4>
+          <button type="button" class="product-modal__close" data-products-modal-close>
+            <svg width="11px" height="11px">
+              <use href="./images/icons.svg#icon-off"></use>
+            </svg>
+          </button>
+        </div>
+        <!---------------- Modal screen --------->
+
+        <div class="product-modal__circle-green">
+          <div class="product-modal__img">
+            <picture class="product-modal__foto">
+              <source srcset="
+                /src/images/product/modal/ice-modal.jpg    1x,
+                /src/images/product/modal/ice-modal-2x.jpg 2x
+              " media="(min-width:1200px)" />
+              <source srcset="
+                /src/images/product/modal/ice-modal.jpg    1x,
+                /src/images/product/modal/ice-modal-2x.jpg 2x
+              " media="(min-width:768px)" />
+              <source srcset="
+                ./images/product/modal/ice-modal-mobile.jpg       1x,
+                /src/images/product/modal/ice-modal-mobile-2x.jpg 2x
+              " media="(min-width:480px)" />
+              <img class="product-modal__foto" src="./images/product/modal/ice-modal.jpg"
+                alt="Big cup with milkshake" />
+            </picture>
+          </div>
+        </div>
+
+        <div class="product-chekbox">
+          <input class="product-chekbox__input" type="checkbox" name="topic" id="topic-1" />
+          <label for="topic-1" class="product-chekbox__label"></label>
+          <input class="product-chekbox__input" type="checkbox" name="topic" id="topic-2" />
+          <label for="topic-2" class="product-chekbox__label-protein"></label>
+          <input class="product-chekbox__input" type="checkbox" name="topic" id="topic-3" />
+          <label for="topic-3" class="product-chekbox__label-fats"></label>
+          <input class="product-chekbox__input" type="checkbox" name="topic" id="topic-4" />
+          <label for="topic-4" class="product-chekbox__label-carbs"></label>
+        </div>
+        <p class="ingredients__title">Ingredients</p>
+        <ul class="ingredients__list list">
+          <li class="ingredients__item">
+            <p>Milk</p>
+            <p>100ml</p>
+          </li>
+          <li class="ingredients__item">
+            <p>Belgian chocolate</p>
+            <p>20g</p>
+          </li>
+          <li class="ingredients__item">
+            <p>Cream</p>
+            <p>150 ml</p>
+          </li>
+          <li class="ingredients__item">
+            <p>Cocoa powder</p>
+            <p>30g</p>
+          </li>
+          <li class="ingredients__item">
+            <p>Sugar</p>
+            <p>40g</p>
+          </li>
+          <li class="ingredients__item">
+            <p>Vanilla sugar</p>
+            <p>10g</p>
+          </li>
+        </ul>
+        <form action="" class="product-modal__form" autocomplete="off">
+          <div class="product-modal__field">
+            <label class="product-modal__label" for="name" autofocus></label>
+            <input class="product-modal__input" type="text" name="name" id="name" placeholder="Name" />
+          </div>
+          <div class="product-modal__field">
+            <label class="product-modal__label" for="tel"></label>
+            <input class="product-modal__input" type="tel" name="tel" id="tel" placeholder="Phone" />
+          </div>
+
+          <div class="product-modal__textarea">
+            <label class="product-modal__label" for="comment"></label>
+            <textarea class="product-modal__input" type="text" name="comment" id="comment" rows="4"
+              placeholder="Comment"></textarea>
+          </div>
+          <div class="product-modal__inner">
+            <button class="product-modal__button btn" type="submit">Submit</button>
+          </div>
+        </form>       
+      </div>
+    </div>
+  </div>
+</div>
+</section>

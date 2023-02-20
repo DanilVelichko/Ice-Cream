@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@700&family=Seymour+One&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="../src/images/favicon.ico" type="images/x-icon"/>
+<link 
+      rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <include src="./partials/header.html"></include>
+    <main>
+      <include src="./partials/hero.html"></include>
+      <include src="./partials/products.html"></include>
+      <include src="./partials/about.html"></include>
+      <include src="./partials/advantages.html"></include>
+      <include src="./partials/gallery.html"></include>
+      
+      <include src="./partials/contacts.html"></include>
+    </main>
+    <include src="./partials/footer.html"></include>
+  
+
+    <script src="./js/products-modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> 
+    <script> 
+      var swiper = new Swiper('.mySwiper', { 
+        autoplay: true, 
+      }); 
+    </script> 
+    <script> 
+      var swiper = new Swiper('.mySw', { 
+        pagination: { 
+          el: '.swiper-pagination', 
+          clickable: true, 
+        }, 
+      }); 
+    </script>
+  </body>
+</html>

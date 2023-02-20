@@ -1,0 +1,218 @@
+<header class="header">
+  <div class="container header-container">
+      <picture>
+          <source srcset="./images/hero-header/header-logo-des.png 1x, ./images/hero-header/header-logo-des-2x.png 2x" media="(min-width:1200px)">
+          <source srcset="./images/hero-header/header-logo-tab.png 1x, ./images/hero-header/header-logo-tab-2x.png 2x" media="(min-width:768px)">
+          <source srcset="./images/hero-header/header-logo-mob.png 1x, ./images/hero-header/header-logo-mob-2x.png 2x" media="(min-width:320px)">
+          <img src="./images/hero-header/header-logo-des-2x.png" alt="логотип">
+      </picture>
+      
+      <div class="header-navigation">
+          <ul class="site-nav">
+              <li class="site-nav-item">
+                  <a class="site-nav-link" href="#">Home</a>
+              </li>
+              <li class="site-nav-item">
+                  <a class="site-nav-link" href="#about">How it’s made?</a>
+              </li>
+              <li class="site-nav-item">
+                  <a class="site-nav-link" href="#products-section">Our products</a>
+              </li>
+              <li class="site-nav-item">
+                  <a class="site-nav-link" href="#contacts">Contact</a>
+              </li>
+          </ul>
+      </div>
+      <div class="header-menu-modal">
+          <button class="header-menu-open" data-menu-open>
+              <svg class="icon-header-menu-open" width="32" height="32">
+                  <use href="./images/icons.svg#icon-header-menu-open"></use>
+              </svg>
+          </button>
+          <button class="btn header-btn" data-header-modal-open>
+              Buy now
+              <svg class="btn-icon" width="12" height="12">
+                  <use href="./images/icons.svg#icon-chevron-right"></use>
+              </svg>
+          </button>
+      </div>
+  </div>
+  <div class="mob-menu is-hidden" data-menu>
+      <div class="container">
+          <div class="mob-menu-top">
+              <picture>
+                  <source srcset="./images/hero-header/header-logo-des.png 1x, ./images/hero-header/header-logo-des-2x.png 2x"
+                      media="(min-width:1200px)">
+                  <source srcset="./images/hero-header/header-logo-tab.png 1x, ./images/hero-header/header-logo-tab-2x.png 2x"
+                      media="(min-width:768px)">
+                  <source srcset="./images/hero-header/header-logo-mob.png 1x, ./images/hero-header/header-logo-mob-2x.png 2x"
+                      media="(min-width:320px)">
+                  <img src="./images/hero-header/header-logo-des-2x.png" alt="логотип">
+              </picture>
+              <button class="header-menu-close" data-menu-close>
+                  <svg class="icon-header-menu-close" width="32" height="32">
+                      <use href="./images/icons.svg#icon-header-menu-close"></use>
+                  </svg>
+              </button>
+          </div>
+          <div class="mob-menu-bottom">
+              <ul class="site-nav-menu">
+                  <li class="site-nav-item-menu">
+                      <a class="site-nav-link-menu" href="#">Home</a>
+                  </li>
+                  <li class="site-nav-item-menu">
+                      <a class="site-nav-link-menu" href="#about">How it’s made?</a>
+                  </li>
+                  <li class="site-nav-item-menu">
+                      <a class="site-nav-link-menu" href="#products-section">Our products</a>
+                  </li>
+                  <li class="site-nav-item-menu">
+                      <a class="site-nav-link-menu" href="#contacts">Contact</a>
+                  </li>
+              </ul>
+              <button class="btn header-btn" data-header-modal-open-mob>
+                  Buy now
+                  <svg class="btn-icon" width="12" height="12">
+                      <use href="./images/icons.svg#icon-chevron-right"></use>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </div>
+
+    <!--------------------------------------------------Modal widow----------------------------------->
+    <div class="backdrop__header-modal is-hidden" data-header-modal>
+        <div class="header-modal">
+          <div class="header-modal__container">
+            <!------------------ Close button ----------------->
+      
+            <div class="header-modal__wrap">
+              <p class="header-modal__title">Buy now</p>
+            </div>
+            <button data-header-modal-close type="button" class="header-modal__close">
+                <svg width="16" height="16">
+                    <use href="./images/icons.svg#icon-off"></use>
+                </svg>
+            </button>
+            <!---------------- Modal screen --------->
+            <ul class="header-modal__list">
+              <li class="header-modal__item header-modal__item--green">
+                <div class="header-modal__circle-green">
+                    <div class="header-modal__foto-container">
+                        <picture class="header-modal__foto">
+                          <source srcset="
+                            /src/images/hero-header/kelsey-des.jpg    1x,
+                            /src/images/hero-header/kelsey-des-2x.jpg 2x "
+                            media="(min-width:1200px)"
+                          />
+                          <source srcset="
+                            /src/images/hero-header/kelsey-des.jpg    1x,
+                            /src/images/hero-header/kelsey-des-2x.jpg 2x"
+                            media="(min-width:768px)"
+                          />
+                          <source srcset="
+                            ./images/hero-header/kelsey-mob.jpg       1x,
+                            ./images/hero-header/kelsey-mob-2x.jpg 2x"
+                            media="(min-width:480px)"
+                          />
+                          <img class="header-modal__foto"
+                            src="./images/hero-header/kelsey-des.jpg" alt="Big cup with milkshake"
+                          />
+                        </picture>
+                    </div>
+                </div>
+                <p class="header-modal__names">Ice cream</p>
+                </li>
+                <li class="header-modal__item header-modal__item--yellow">
+                  <div class="header-modal__circle-yellow">
+                      <div class="header-modal__foto-container">
+                          <picture class="header-modal__foto">
+                            <source srcset="
+                              /src/images/hero-header/pariwat-des.jpg    1x,
+                              /src/images/hero-header/pariwat-des-2x.jpg 2x "
+                              media="(min-width:1200px)"
+                            />
+                            <source srcset="
+                              /src/images/hero-header/pariwat-des.jpg    1x,
+                              /src/images/hero-header/pariwat-des-2x.jpg 2x"
+                              media="(min-width:768px)"
+                            />
+                            <source srcset="
+                              ./images/hero-header/pariwat-mob.jpg       1x,
+                              ./images/hero-header/pariwat-mob-2x.jpg 2x"
+                              media="(min-width:480px)"
+                            />
+                            <img class="header-modal__foto"
+                              src="./images/hero-header/pariwat-des.jpg" alt="Big cup with milkshake"
+                            />
+                          </picture>
+                      </div>
+                  </div>
+                  <p class="header-modal__names">Ice coffee</p>
+                  </li>
+                  <li class="header-modal__item header-modal__item--orange">
+                    <div class="header-modal__circle-orange">
+                        <div class="header-modal__foto-container">
+                            <picture class="header-modal__foto">
+                              <source srcset="
+                                /src/images/hero-header/victor-des.jpg    1x,
+                                /src/images/hero-header/victor-des-2x.jpg 2x "
+                                media="(min-width:1200px)"
+                              />
+                              <source srcset="
+                                /src/images/hero-header/victor-des.jpg    1x,
+                                /src/images/hero-header/victor-des-2x.jpg 2x"
+                                media="(min-width:768px)"
+                              />
+                              <source srcset="
+                                ./images/hero-header/victor-mob.jpg       1x,
+                                ./images/hero-header/victor-mob-2x.jpg 2x"
+                                media="(min-width:480px)"
+                              />
+                              <img class="header-modal__foto"
+                                src="./images/hero-header/victor-des.jpg" alt="Big cup with milkshake"
+                              />
+                            </picture>
+                        </div>
+                    </div>
+                    <p class="header-modal__names">Milkshakes</p>
+                    </li>
+            </ul>
+            <form class="header-modal__form" autocomplete="off">
+              <div class="header-modal__field">
+                <label class="header-modal__label" for="name" autofocus></label>
+                <input
+                  class="header-modal__input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                />
+              </div>
+              <div class="header-modal__field">
+                <label class="header-modal__label" for="tel"></label>
+                <input
+                  class="header-modal__input"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  placeholder="Phone"
+                />
+              </div>
+                  <div class="header-modal__textarea">
+                <label class="header-modal__label" for="comment"></label>
+                <textarea
+                  class="header-modal__input"
+                  name="comment"
+                  id="comment"
+                  rows="4"
+                  placeholder="Comment"></textarea>
+              </div>
+              <div class="header-modal__inner">
+                <button class="header-modal__button btn" type="submit">Submit</button>
+              </div>
+            </form>            
+          </div>
+        </div>
+    </div>
+</header>
